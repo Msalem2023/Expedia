@@ -1,0 +1,30 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+}
+.wrapper .inputText{
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #777;
+ 	box-shadow: none ;
+    padding: 10px;
+}
+.wrapper .inputText:focus{
+	border-color: blue;
+	border-width: medium medium 2px;
+}
+.wrapper .label {
+	position: absolute;
+	pointer-events: none;
+	top: 18px;
+	left: 10px;
+	transition: 0.2s ease all;
+}
+.wrapper input:focus ~ .label,
+.wrapper input:not(:focus):valid ~ .label{
+	top: 0px;
+	left: 10px;
+	font-size: 13px;
+	opacity: 1;
+}
